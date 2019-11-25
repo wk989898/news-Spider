@@ -3,6 +3,7 @@ import json
 import time
 import os
 import re
+import copy
 
 urls=['https://i.match.qq.com/ninja/fragcontent?pull_urls=news_top_2018', # 今日要闻
      'https://pacaio.match.qq.com/irs/rcd?&expIds=',
@@ -51,7 +52,7 @@ def getnews():
     # res=reg.findall(response)
     _dict= json.loads(response)
     data=_dict['data']
-    # get_comment(data)
+    get_comment(data)
 
     urldata = []
     for j in data:
@@ -69,14 +70,17 @@ def todaynews():
   with open('./result/Today.json','w') as tf:
     json.dump(_arr,tf,ensure_ascii=False,separators=(',',':'),indent=4)
 
-# def get_comment(data):
-#   for k in data:
-#     comment=k["comment_id"]
-#     response=requests.get('https://coral.qq.com/article/'+comment+
-#                           '/comment/v2?orinum=10&oriorder=o&pageflag=&cursor=&scorecursor=0&orirepnum=&reppageflag=&source=&callback=_comment&_='+
-#                           str(time.time()),headers={'Referer':'http://coral.qq.com/'})
-#   print(response)
-
+def get_comment(data):
+  for k in data:
+    comment=k["comment_id"]
+    response=requests.get('http://coral.qq.com/article/'+comment+
+                          '/comment/v2?orinum=10&oriorder=o&pageflag=&cursor=&scorecursor=0&orirepnum=&reppageflag=&source=&_=',
+                          headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'}).text
+    mydict = json.loads(response)
+    mydata = mydict['data']
+    k['oriCommList']=copy.deepcopy(mydata['oriCommList'])
+    k['repCommList']=copy.deepcopy(mydata['repCommList'])
+    k['userList']=copy.deepcopy(mydata['userList'])
 
 todaynews()
 getnews()

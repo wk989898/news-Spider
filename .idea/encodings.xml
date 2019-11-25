@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/detail/detail-20180710.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/detail/detail-20191124.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/result/Today.json" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/20180710V1TEJG00.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/20191023A0G8Y100.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/20191103A02P5R00.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/20191122A0N1Y100.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/20191124A04VS400.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191103A02P5R00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191121A0GAZC00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191121A0GAZC00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191121A0GAZC00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191121A0LTQP00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122A0FUZ000.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122A0FUZ000.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122A0MENF00.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122A0MR8C00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122A0NW8900.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122A0P5ZG00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122V0CCC100.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122V0G1AB00.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122V0GH7V00.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122V0HYQN00.json" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/json/20191122V0J9L200.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191122V0NRMV00.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191123V0GLQ000.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191123V0JH3300.json" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/json/20191125A0F8P400.json" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -25,4 +25,4 @@ class DetailPipeline(ImagesPipeline):
     name = request.meta['name']
     # 过滤windows字符串，不经过这么一个步骤，你会发现有乱码或无法下载
     # 分文件夹存储的关键：{0}对应着name；{1}对应着image_guid
-    return name+'/'+name
+    return name+'/'

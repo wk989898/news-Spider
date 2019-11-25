@@ -55,9 +55,9 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'detail.middlewares.DetailDownloaderMiddleware': 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   'detail.middlewares.DetailDownloaderMiddleware': 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -67,18 +67,19 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'detail.pipelines.DetailPipeline': 300,
-   'scrapy.pipelines.images.ImagesPipeline': 1,
-   'scrapy.pipelines.files.FilesPipeline': 1,
-}
-# 图片下载
-IMAGES_EXPIRES = 30
-IMAGES_STORE= '../src/pics/'
+# ITEM_PIPELINES = {
+#    'detail.pipelines.DetailPipeline': 300,
+#    'scrapy.pipelines.images.ImagesPipeline': 1,
+#    'scrapy.pipelines.files.FilesPipeline': 1,
+#    # 'detail.pipelines.DetailPipeline': 1,
+# }
+# # 图片下载
+# IMAGES_EXPIRES = 30
+# IMAGES_STORE= '../src/pics/'
 
 #文件下载
-FILES_EXPIRES = 30
-FILES_STORE = '../src/file/'
+# FILES_EXPIRES = 30
+# FILES_STORE = '../src/file/'
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
