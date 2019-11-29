@@ -36,11 +36,17 @@ class detail(scrapy.Spider):
       c_main=content.css('.one-p::text').extract()
       c_title=content.css('h1::text').extract_first()
       c_pics=content.css('.one-p img::attr(src)').extract()
+      c_i=content.css('.one-p i::text').extracrt()
+      c_script=(content.css('script::text').extract_first())
       _c['c_intro']=copy.deepcopy(c_intro)
       _c['c_main']=copy.deepcopy(c_main)
       _c['c_pics']=copy.deepcopy(c_pics)
       _c['c_title']=copy.deepcopy(c_title)
       _c['title']=copy.deepcopy(title)
+      _c['script']=copy.deepcopy(c_script)
+      _c['i']=copy.deepcopy(c_i)
+      _c['script']=_c['script'].replace('window.DATA.videoArr.push(','').replace(')','').replace('IMGDATA = [','').replace(']','')
+      # _c['script']=json.dump(_c['script'],ensure_ascii=False,separators=(',',':'),indent=4)
 
     # 注意 ： 路径必须为数组类型
     # for pic in c_pics:
