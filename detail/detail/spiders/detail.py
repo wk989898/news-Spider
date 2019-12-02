@@ -36,7 +36,7 @@ class detail(scrapy.Spider):
       c_main=content.css('.one-p::text').extract()
       c_title=content.css('h1::text').extract_first()
       c_pics=content.css('.one-p img::attr(src)').extract()
-      c_i=content.css('.one-p i::text').extracrt()
+      c_i=content.css('.one-p i::text').extract()
       c_script=(content.css('script::text').extract_first())
       _c['c_intro']=copy.deepcopy(c_intro)
       _c['c_main']=copy.deepcopy(c_main)
@@ -56,7 +56,7 @@ class detail(scrapy.Spider):
     #   yield item
 
       page=response.url.split('/')[-1].replace('.html','.json')
-      with open('../src/json/'+page,'w') as t:
+      with open('../src/'+page,'w') as t:
        json.dump(_c,t,ensure_ascii=False,separators=(',',':'),indent=4)
 
   def getUrl(self,id,obj):

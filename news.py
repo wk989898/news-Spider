@@ -77,6 +77,8 @@ def get_comment(data):
                           '/comment/v2?orinum=10&oriorder=o&pageflag=&cursor=&scorecursor=0&orirepnum=&reppageflag=&source=&_=',
                           headers={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'}).text
     mydict = json.loads(response)
+    if 'data' not in mydict:
+      return
     mydata = mydict['data']
     k['oriCommList']=copy.deepcopy(mydata['oriCommList'])
     k['repCommList']=copy.deepcopy(mydata['repCommList'])
