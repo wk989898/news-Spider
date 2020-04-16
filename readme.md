@@ -2,7 +2,7 @@
 ## 索引
 
 ### result 为分类结果 （评论也放在里面）
-### src 为 detail[./detail]搜索结果
+### src 为 [detail](./detail)搜索结果
 json存放具体内容细节  
 ### tohtml 为链接具体内容网页的网址  
 ### detail
